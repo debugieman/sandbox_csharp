@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("This is me trying to learn C#, so if sth doesnt work, keep breathing ok ?!");
 Console.Title = "Story of day and night";
 Console.ForegroundColor = ConsoleColor.White;
 Console.BackgroundColor = ConsoleColor.Black;
@@ -16,7 +16,7 @@ string answerS = Console.ReadLine();
 Console.WriteLine((answerS == "yes") ? "Great Let's play" : "Dont be a party-pooper, l ets play annyway!");
 
 
-Console.WriteLine("But 1st, what is your name?");
+Console.WriteLine("But 1st, what is your name?"); 
 string userName = Console.ReadLine();
 Console.WriteLine($"What a great name {userName}, lets get started");
 
