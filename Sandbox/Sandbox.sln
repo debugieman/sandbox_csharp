@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopsTesting", "LoopsTestin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OopTesting", "OopTesting\OopTesting.csproj", "{D4D4757F-5401-4DB6-A4C7-9C1EE686C950}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtherExcercises", "OtherExcercises\OtherExcercises.csproj", "{D079B64D-1450-46A5-B03D-F519C41B95BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "futhertesting", "futhertesting\futhertesting.csproj", "{900F02DD-135A-46EA-9EED-A4AA1EC2905F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{D4D4757F-5401-4DB6-A4C7-9C1EE686C950}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4D4757F-5401-4DB6-A4C7-9C1EE686C950}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4D4757F-5401-4DB6-A4C7-9C1EE686C950}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D079B64D-1450-46A5-B03D-F519C41B95BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D079B64D-1450-46A5-B03D-F519C41B95BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D079B64D-1450-46A5-B03D-F519C41B95BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D079B64D-1450-46A5-B03D-F519C41B95BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{900F02DD-135A-46EA-9EED-A4AA1EC2905F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{900F02DD-135A-46EA-9EED-A4AA1EC2905F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{900F02DD-135A-46EA-9EED-A4AA1EC2905F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{900F02DD-135A-46EA-9EED-A4AA1EC2905F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
