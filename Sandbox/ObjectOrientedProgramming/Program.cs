@@ -1,1 +1,1 @@
-﻿
+﻿var account = new ObjectOrientedProgramming.Bankaccount("Alex", 10000);
