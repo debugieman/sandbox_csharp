@@ -17,8 +17,9 @@ Console.WriteLine($"Index of searched character is {searchInput}, counting from 
 
 */
 
-const double PI = 3.14159265359;
-string greet = "lol";
+
+
+
 void PrintString()
 {
 
