@@ -27,3 +27,37 @@ finally
     Console.WriteLine("Thank you");
 }
 
+
+string numberAsString = "128";
+int parsedValue;
+bool success = int.TryParse(numberAsString, out parsedValue);
+//when parsing is succesfull bool is true 
+
+
+Console.WriteLine("Please enter a number that you would liek to check for odd or even:  ");
+string userinput = Console.ReadLine();
+int input1;
+int number;
+bool success_conversion = int.TryParse(userinput, out number);
+if (success_conversion)
+{
+    Console.WriteLine("Conversion successfull");
+    int userinput_1 = userinput
+}
+else
+{
+    Console.WriteLine("COnversion not succesfull");
+}
+
+
+public static void Check(var userinput)
+{
+    if (!(userinput % 2 = 0))
+    {
+        return;
+    }
+    Console.WriteLine("Number is even");
+
+
+}
+
