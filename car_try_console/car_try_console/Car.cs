@@ -1,4 +1,6 @@
-﻿using System;
+﻿using car_try_console;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,52 +12,40 @@ namespace car_try_console
     public class Car
     {
         //const and fields
-        //private static int counter = 0; 
-        public static int count = 0;
-        private string name;
-        private string model;
-        private int numberOfDoors;
-        private int engineCapacity;
-        private int averageFuelConsumption;
+        
+        private static int _numberOfCars = 0;
+        private string _name { get; set; }
+        private string _modelname { get; set; }
+        private int _numberOfDoors { get; }
+        private int _engineCapacity { get; }
+        private double _averageFuelConsumption { get; }
+        
 
         //properties
 
-        //private static int Counter
-        //{
-        //   return  CounterOfObjects++
-        //}
-        public string Name
-        {
-            get { return name; }
+        
+        public string Name {get { return _name; }}
+        public string Modelname { get { return _modelname; } }
 
-        }
-        private string model;
-        {
-            get {return model;}
-        }
+        public string NumberOfDoors { get { return _numberOfDoors; } }
+        public int EngineCapacity { get { return _engineCapacity; } }
+        public double AverageFuelConsumption { get { return _averageFuelConsumption; } }
 
-        public string NumberOfDoors
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="name">This is name of the car's brand.Name of manufacturer(for example Toyota)</param>
+        /// <param name="modelname">This is model of certain brand's car (for example Avensis) </param>
+        /// <param name="numberOfDoors">It's number of doors with windowpane, that you can access a car with(it's usually number between 2 and 5)</param>
+        /// <param name="enginecapacity">is calculated by multiplying together three values; the distance travelled by the piston (the stroke length), the circular area of the cylinder, and the number of cylinders in the whole engine(usually between 1.0 and 6.0)</param>
+        /// <param name="averageFuelConsumption">Fuel consumption measures the amount of fuel a car consumes to go a specific distance(In this example, its liters per 100km)</param>
+        public Car(string name, string modelname, int numberOfDoors, int enginecapacity, double averageFuelConsumption)
         {
-            get { return numberOfDoors; }
-            
-        }
 
-        public string Model { get; set; }
-        public int NumberOfDoors { get; set; }
-        public int EngineCapacity { get; set; }
-        public int AverageFuelConsumption { get; set; }
-        //constructor
-        public Car()
-        {
-            return count++;
         }
         
-        //public methods
-        public Car(string name, ...)
-        { 
-        this.name = name;
-        
-        }
+     
+      
         public void FuelPrice(int engineCapacity, int lenght)
         {
 
