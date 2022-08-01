@@ -29,7 +29,10 @@ namespace car_try_console
             get { return name; }
 
         }
-        private string numberOfDoors;
+        private string model;
+        {
+            get {return model;}
+        }
 
         public string NumberOfDoors
         {
