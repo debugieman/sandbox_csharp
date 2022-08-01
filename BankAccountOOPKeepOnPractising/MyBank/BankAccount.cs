@@ -11,11 +11,17 @@ public class BankAccount
     public string Number { get; }
     public string Owner { get; set; }
     public decimal Balance  { get; }
+
+
+    private static int accountNumberSeed = 49102028; 
+    
     //constructor
     public BankAccount(string name, decimal initialBalance)
     {
         this.Owner = name;
         this.Balance = initialBalance;
+        this.Number = accountNumberSeed.ToString();
+        accountNumberSeed++;
     
     }
     //props
