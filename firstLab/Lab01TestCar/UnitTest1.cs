@@ -10,7 +10,7 @@ namespace Lab01TestCar
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+            //Assert.Pass();
         }
     }
 }
