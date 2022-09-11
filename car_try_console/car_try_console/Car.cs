@@ -19,15 +19,37 @@ namespace car_try_console
         public int _numberOfDoors;
         private int _engineCapacity;
         private double _averageFuelConsumption;
-        
+        public double fuelPrice;
+        public double lenghtRoad;
+        public double _cost;
         //properties
         public string Name { get { return _name; } }
         public string Modelname { get { return _modelname; } }
 
         public int NumberOfDoors { get { return _numberOfDoors; } }
         public int EngineCapacity  { get { return _engineCapacity; } }
-        public double AverageFuelConsumption { get { return _averageFuelConsumption; } }
-        // ponizej czy tak tego uzywac ?
+        public double AverageFuelConsumption 
+        {
+            get  { return _averageFuelConsumption; } 
+            set { _averageFuelConsumption = value; }
+        
+        
+        }
+
+        public double FuelPrice { get;  set; }
+
+        public double Cost
+        {
+            get { return _averageFuelConsumption * fuelPrice; }
+            
+
+
+        }
+
+    }    
+
+        public Car() { }
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -38,20 +60,13 @@ namespace car_try_console
         /// <param name="enginecapacity">is calculated by multiplying together three values; the distance travelled by the piston (the stroke length), the circular area of the cylinder, and the number of cylinders in the whole engine(usually between 1.0 and 6.0)</param>
         /// <param name="averageFuelConsumption">Fuel consumption measures the amount of fuel a car consumes to go a specific distance(In this example, its liters per 100km)</param>
 
-
-
-
-
-
-        public Car() { }
-        
-
         public Car(string name,
                    string modelname,
                    int numberOfDoors,
                    int enginecapacity,
                    double averageFuelConsumption)
         {
+        /*
             _numberOfCars++;
             _name = name;
             _modelname = modelname;
@@ -60,19 +75,30 @@ namespace car_try_console
             _averageFuelConsumption = averageFuelConsumption;
 
 
-    }
-        
-     
-      
-        public void FuelPrice(int engineCapacity, int lenght)
-        {
+    }*/
 
-            int price = (engineCapacity * lenght) * 3;
-            Console.WriteLine(price);
+        
+        public double CalculateFuel (double lenghtRoad)
+        {
+            return AverageFuelConsumption * lenghtRoad / 100;
+
+        }
+
+
+        public  double CalculateCost(double lenght, double fuelPrice)
+        {
+            return (AverageFuelConsumption * lenghtRoad / 100) * FuelPrice;
 
 
         }
-        //private methods
+
+          
+
+
+
+        //private double  FuelPrice(double FuelPrice, double lenghtRoad)
+        //wypiszinfo
+
 
     }
 }
