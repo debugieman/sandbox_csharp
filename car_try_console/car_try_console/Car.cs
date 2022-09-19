@@ -48,7 +48,7 @@ namespace car_try_console
 
     }    
 
-        public Car() { }
+         public Car() { }
 
         /// <summary>
         /// Constructor
@@ -60,13 +60,13 @@ namespace car_try_console
         /// <param name="enginecapacity">is calculated by multiplying together three values; the distance travelled by the piston (the stroke length), the circular area of the cylinder, and the number of cylinders in the whole engine(usually between 1.0 and 6.0)</param>
         /// <param name="averageFuelConsumption">Fuel consumption measures the amount of fuel a car consumes to go a specific distance(In this example, its liters per 100km)</param>
 
-        public Car(string name,
+     /*       public Car(string name,
                    string modelname,
                    int numberOfDoors,
                    int enginecapacity,
                    double averageFuelConsumption)
         {
-        /*
+        
             _numberOfCars++;
             _name = name;
             _modelname = modelname;
@@ -74,8 +74,8 @@ namespace car_try_console
             _engineCapacity = enginecapacity;
             _averageFuelConsumption = averageFuelConsumption;
 
-
-    }*/
+  */
+    
 
         
         public double CalculateFuel (double lenghtRoad)

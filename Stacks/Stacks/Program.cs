@@ -11,13 +11,13 @@ Console.WriteLine(myStackItem);
 
 
 //QUEUE
-/*
+
 Queue<int> queue = new Queue<int>();
 queue.Enqueue(1);
 queue.Enqueue(2);   
 queue.Enqueue(3);
 Console.WriteLine($"The last value in queue is {queue.Peek()}");
-*/
+
 
 
 Queue<string> Qstring = new Queue<string>();
@@ -38,3 +38,5 @@ foreach (string q in Qcopytest)
 {
     Console.WriteLine(q);
 }
+
+Console.ReadKey();
