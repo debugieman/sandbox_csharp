@@ -42,7 +42,7 @@ namespace virtual_ovverride_practising_OOP
             }
 
         }
-        public virtual void Play()
+        public virtual void  Play()
         {
             Console.WriteLine($"{Name} is playing");
         }
