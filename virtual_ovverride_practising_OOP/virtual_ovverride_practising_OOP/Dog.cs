@@ -10,10 +10,11 @@ namespace virtual_ovverride_practising_OOP
 
     public class Dog : Animal
     {
-        public bool is_Happy { get; set; }
+        
         public Dog(string name, int age) : base(name, age)
         {
-            is_Happy = true;
+             
+                
         }
 
         public override void Eat()
@@ -26,7 +27,7 @@ namespace virtual_ovverride_practising_OOP
         }
         public override void  Play()
         {
-            if (is_Happy)
+            if (this.Is_Happy)
             {
                 base.Play();
             }
