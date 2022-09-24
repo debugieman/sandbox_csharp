@@ -43,6 +43,16 @@ public  class Post
     public void update(string title, bool isPublic)
     {
         this.Title = title;
-
+        this.IsPublic= isPublic;
     }
+
+
+    public override string ToString()
+    {
+        return String.Format($"{this.ID}  -  {this.Title} by {this.SendByUserName}");
+    }
+
+
+
 }
+
