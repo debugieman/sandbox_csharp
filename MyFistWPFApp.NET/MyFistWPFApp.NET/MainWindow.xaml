@@ -8,19 +8,19 @@
         Title="TheAnimalGame" Height="450" Width="400">
     <Grid Height="434" VerticalAlignment="Center" RenderTransformOrigin="0.504,0.381">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="68*"/>
-            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
             <ColumnDefinition Width="{Binding ElementName=window, Mode=OneWay}"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="65*"/>
-            <RowDefinition Height="81*"/>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="79*"/>
-            <RowDefinition Height="80*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
 
 
         </Grid.RowDefinitions>
