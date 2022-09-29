@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:wpfGame"
         mc:Ignorable="d"
         Title="Game" Height="450" Width="400">
-    <Grid>
+    <Grid Margin="0,1,0,-1">
         <Grid.RowDefinitions>
             
             <RowDefinition/>
@@ -43,5 +43,11 @@
         <TextBlock Grid.Column="2" HorizontalAlignment="Center" Grid.Row="3" Text="?" VerticalAlignment="Center" FontSize="36"/>
         <TextBlock Grid.Column="3" HorizontalAlignment="Center" Grid.Row="3" Text="?" VerticalAlignment="Center" FontSize="36"/>
         <TextBlock Grid.Column="0" HorizontalAlignment="Center" Grid.Row="3" Text="?" VerticalAlignment="Center" FontSize="36"/>
+        
+        
+        
+        
+        
+        
     </Grid>
 </Window>
