@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace wpfGame
 {
     /// <summary>
@@ -28,9 +29,41 @@ namespace wpfGame
 
         }
 
+        public object Children { get; private set; }
+
         private void SetUpGame()
         {
-            throw new NotImplementedException();
+            List<string>animalEmoji = new List<string>
+
+        {
+        "🐻","🐻",
+        "🐶","🐶",
+        "🐱‍","🐱‍",
+        "🦁","🦁",
+        "🦊","🦊",
+        "🦒","🦒",
+        "🦝","🦝",
+        "🐼","🐼",
+
+
+
+
+
+        };
+            Random random = new Random();
+
+            foreach (TextBlock textBlock in mainGrid1.Children.OfType<TextBlock>())
+            { 
+            int index = random.Next(animalEmoji.Count);
+                string nextEmoji = animalEmoji[index];
+                textBlock.Text = nextEmoji;
+                animalEmoji.RemoveAt(index);
+
+
+            }
+        
+        
+        
         }
     }
 }
