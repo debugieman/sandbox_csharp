@@ -12,21 +12,38 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 
 namespace wpfGame
+    
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer timer = new DispatcherTimer();
+        int tenthsOfSecondElapsed;
+        int matchesFound;
         public MainWindow()
         {
             InitializeComponent();
+            timer.Interval = TimeSpan.FromSeconds(.1);
+            timer.Tick += Timer_Tick1;
             SetUpGame();
 
 
+        }
+
+        private void Timer_Tick1(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         public object Children { get; private set; }
