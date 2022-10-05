@@ -44,11 +44,12 @@
         <TextBlock Grid.Column="2" HorizontalAlignment="Center" Grid.Row="3" Text="?" VerticalAlignment="Center" FontSize="36" MouseDown="TextBlock_MouseDown"/>
         <TextBlock Grid.Column="3" HorizontalAlignment="Center" Grid.Row="3" Text="?" VerticalAlignment="Center" FontSize="36" MouseDown="TextBlock_MouseDown"/>
         <TextBlock Grid.Column="0" HorizontalAlignment="Center" Grid.Row="3" Text="?" VerticalAlignment="Center" FontSize="36" MouseDown="TextBlock_MouseDown"/>
-        
-        
-        
-        
-        
-        
+        <TextBlock x:Name="TimeTextBlock" HorizontalAlignment="Center" Margin="42,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="ElapsedTime" VerticalAlignment="Center" FontSize="36" Grid.ColumnSpan="4" MouseDown="TimeTextBlock_MouseDown"/>
+
+
+
+
+
+
     </Grid>
 </Window>

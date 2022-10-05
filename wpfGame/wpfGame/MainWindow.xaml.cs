@@ -29,8 +29,8 @@ namespace wpfGame
         public MainWindow()
         {
             InitializeComponent();
-            timer.Interval = TimeSpan.FromSeconds(.1);
-            timer.Tick += Timer_Tick1;
+            timer.Interval = TimeSpan.FromSeconds(0.01);
+            timer.Tick += Timer_Tick;
             SetUpGame();
 
 
@@ -43,10 +43,14 @@ namespace wpfGame
 
         private void Timer_Tick(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+           //throw new NotImplementedException();
+
+
+
+
         }
 
-        public object Children { get; private set; }
+        
 
         private void SetUpGame()
         {
@@ -114,6 +118,16 @@ namespace wpfGame
             }
 
           
+        }
+
+        private void TimeTextBlock_(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void TimeTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }
