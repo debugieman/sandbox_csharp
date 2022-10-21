@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Animal_Game
+namespace _Animal_Game_
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

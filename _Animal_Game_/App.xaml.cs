@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Animal_Game
+namespace _Animal_Game_
 {
     /// <summary>
     /// Interaction logic for App.xaml
