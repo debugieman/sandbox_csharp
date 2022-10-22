@@ -5,15 +5,41 @@
         static void Main(string[] args)
         {
             List<int> number_list = new List<int>();
-            int number_of_numbers = 1;
 
-            Console.WriteLine("PLease enter number of numbers u wanna enter");
-            number_of_numbers = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please enter the numbers");
+            // What if not number ? Loop it
+            var number_of_numbers = "";
+            int numberX = 1;
+                       
+            bool validInput = false;
+            while (!validInput)
+            {
+                Console.WriteLine("PLease enter number of numbers u wanna enter");
+                number_of_numbers = Console.ReadLine();
 
-            for (int i = 0; i < number_of_numbers; i++)
+
+
+                if (int.TryParse(number_of_numbers, out numberX))
+                {
+                    Console.WriteLine($"OK, please enter {numberX} numbers of your choosing");
+                    validInput = true;
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input! Please enter a proper number using digits ");
+
+                }
+            }
+
+
+
+
+
+
+            for (int i = 0; i < numberX; i++)
 
             {
+
                 number_list.Add(Convert.ToInt32(Console.ReadLine()));
             }
             int Max_number = Int32.MinValue;
@@ -36,7 +62,7 @@
                 
 
             }
-            var Avrg = sum / number_of_numbers;
+            var Avrg = sum / numberX;
 
             Console.WriteLine($"The biggest value is : {Max_number}");
             Console.WriteLine($"The lowest value is: {Min_number}");
@@ -46,7 +72,7 @@
 
 
 
-
+            
 
         }
     }
