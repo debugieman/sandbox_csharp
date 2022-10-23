@@ -18,6 +18,7 @@
 
 
 
+
                 if (int.TryParse(number_of_numbers, out numberX))
                 {
                     Console.WriteLine($"OK, please enter {numberX} numbers of your choosing");
@@ -42,6 +43,8 @@
 
                 number_list.Add(Convert.ToInt32(Console.ReadLine()));
             }
+            
+
             int Max_number = Int32.MinValue;
             foreach (int i in number_list)
             {
