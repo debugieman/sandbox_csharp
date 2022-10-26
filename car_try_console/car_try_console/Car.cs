@@ -12,7 +12,7 @@ namespace car_try_console
     public class Car
     {
         //const and fields
-
+        #region fields and constants
         public static int _numberOfCars;
         private string _name;
         private string _modelname;
@@ -22,13 +22,14 @@ namespace car_try_console
         public double fuelPrice;
         public double lenghtRoad;
         public double _cost;
+        #endregion
         //properties
         public string Name { get { return _name; } }
         public string Modelname { get { return _modelname; } }
 
-        public int NumberOfDoors { get { return _numberOfDoors; } }
+        public int NumberOfDoors { get { return _numberOfDoors; } set { _numberOfDoors = value; } }
         public int EngineCapacity { get { return _engineCapacity; } }
-        public double AverageFuelConsumption { get; set; }
+        public double AverageFuelConsumption { get { return _averageFuelConsumption; } }
 
 
         public double FuelPrice { get; set; }
@@ -59,25 +60,37 @@ namespace car_try_console
             _averageFuelConsumption = averageFuelConsumption;
 
 
-             double CalculateCost(double lenght, double fuelPrice)
-            {
-                return (AverageFuelConsumption * lenghtRoad / 100) * FuelPrice;
-
-
-            }
+             
 
         }
-
-        private double CalculateFuel(double lenghtRoad)
+        
+        private double CalculateFuelConsumption(double lenghtRoad)
         {
             return AverageFuelConsumption * lenghtRoad / 100;
 
         }
 
+        public double CalculateCost(double lenght, double fuelPrice)
+        {
+            return CalculateFuelConsumption(lenght) * fuelPrice;
 
 
-        //private double  FuelPrice(double FuelPrice, double lenghtRoad)
-        //wypiszinfo
+        }
+
+        public void WriteInfo()
+        {
+            Console.WriteLine($"Name: {Name}");
+        // dopisz
+        
+        
+        
+        }
+
+        public static void WriteNumberOfCars()
+        {
+            Console.WriteLine(_numberOfCars);
+        
+        }
 
 
     }
