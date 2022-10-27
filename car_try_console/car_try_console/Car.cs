@@ -80,10 +80,15 @@ namespace car_try_console
         public void WriteInfo()
         {
             Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"Number of doors: {Modelname}");
+            Console.WriteLine($"Engine capacity: {EngineCapacity}");
+            Console.WriteLine($"Average fuel consumption peer 100 km : {AverageFuelConsumption}");
+            Console.WriteLine("******************************************************************");
+
         // dopisz
-        
-        
-        
+
+
+
         }
 
         public static void WriteNumberOfCars()
