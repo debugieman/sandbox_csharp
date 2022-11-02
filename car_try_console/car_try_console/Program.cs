@@ -1,14 +1,7 @@
 ﻿
 using car_try_console;
 
-/*
-static string[] ReadFile(string filename)
-{
-    string[] files = System.IO.File.ReadAllLines(filename);
-    return lines;
-}
 
-*/
 
 
 var auto1 = new Car("Toyota", "Avensis", 4, 3, 2.2);
