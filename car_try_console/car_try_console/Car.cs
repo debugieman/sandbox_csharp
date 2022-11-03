@@ -34,6 +34,8 @@ namespace car_try_console
 
         public double FuelPrice { get; set; }
 
+
+
         public double Cost
         {
             get { return _averageFuelConsumption * fuelPrice; }
