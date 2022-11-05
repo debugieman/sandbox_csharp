@@ -29,7 +29,7 @@ Partial Class Form1
         Me.FirstNameTb = New System.Windows.Forms.TextBox()
         Me.LastNameTb = New System.Windows.Forms.TextBox()
         Me.adressTb = New System.Windows.Forms.TextBox()
-        Me.GenderTb = New System.Windows.Forms.TextBox()
+        Me.GenderCB = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -62,7 +62,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(31, 139)
+        Me.Label4.Location = New System.Drawing.Point(31, 192)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(48, 15)
         Me.Label4.TabIndex = 3
@@ -85,26 +85,27 @@ Partial Class Form1
         'adressTb
         '
         Me.adressTb.Location = New System.Drawing.Point(123, 104)
+        Me.adressTb.Multiline = True
         Me.adressTb.Name = "adressTb"
-        Me.adressTb.Size = New System.Drawing.Size(405, 23)
+        Me.adressTb.Size = New System.Drawing.Size(405, 72)
         Me.adressTb.TabIndex = 6
         '
-        'GenderTb
+        'GenderCB
         '
-        Me.GenderTb.AccessibleRole = System.Windows.Forms.AccessibleRole.DropList
-        Me.GenderTb.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.GenderTb.Location = New System.Drawing.Point(123, 136)
-        Me.GenderTb.Name = "GenderTb"
-        Me.GenderTb.Size = New System.Drawing.Size(405, 23)
-        Me.GenderTb.TabIndex = 7
-        Me.GenderTb.UseWaitCursor = True
+        Me.GenderCB.CausesValidation = False
+        Me.GenderCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.GenderCB.FormattingEnabled = True
+        Me.GenderCB.Location = New System.Drawing.Point(123, 189)
+        Me.GenderCB.Name = "GenderCB"
+        Me.GenderCB.Size = New System.Drawing.Size(405, 23)
+        Me.GenderCB.TabIndex = 7
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1560, 1026)
-        Me.Controls.Add(Me.GenderTb)
+        Me.Controls.Add(Me.GenderCB)
         Me.Controls.Add(Me.adressTb)
         Me.Controls.Add(Me.LastNameTb)
         Me.Controls.Add(Me.FirstNameTb)
@@ -127,5 +128,5 @@ Partial Class Form1
     Friend WithEvents FirstNameTb As TextBox
     Friend WithEvents LastNameTb As TextBox
     Friend WithEvents adressTb As TextBox
-    Friend WithEvents GenderTb As TextBox
+    Friend WithEvents GenderCB As ComboBox
 End Class
