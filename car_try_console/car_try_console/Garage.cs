@@ -89,9 +89,21 @@ namespace car_try_console
             }
             return to_return;
 
+            
+        }
+        public void WriteInfo2()
+
+        {
+            foreach (Car _ in _cars_in)
+            {
+                wypis info
+                }
+
+
+
+
 
         }
-
         //properties PL:  właściwości dostępowe ^^
 
 
