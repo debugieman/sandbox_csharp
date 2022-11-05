@@ -30,6 +30,8 @@ Partial Class Form1
         Me.LastNameTb = New System.Windows.Forms.TextBox()
         Me.adressTb = New System.Windows.Forms.TextBox()
         Me.GenderCB = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -95,16 +97,39 @@ Partial Class Form1
         Me.GenderCB.CausesValidation = False
         Me.GenderCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.GenderCB.FormattingEnabled = True
+        Me.GenderCB.Items.AddRange(New Object() {"<empty>", "Male", "Female"})
         Me.GenderCB.Location = New System.Drawing.Point(123, 189)
         Me.GenderCB.Name = "GenderCB"
         Me.GenderCB.Size = New System.Drawing.Size(405, 23)
         Me.GenderCB.TabIndex = 7
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.Location = New System.Drawing.Point(340, 313)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(188, 82)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Add person"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(656, 35)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(650, 360)
+        Me.RichTextBox1.TabIndex = 9
+        Me.RichTextBox1.Text = ""
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1560, 1026)
+        Me.ClientSize = New System.Drawing.Size(1345, 516)
+        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GenderCB)
         Me.Controls.Add(Me.adressTb)
         Me.Controls.Add(Me.LastNameTb)
@@ -115,6 +140,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
         Me.ShowIcon = False
+        Me.Tag = "Read Files"
         Me.Text = "Write/Read/Edit"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -129,4 +155,6 @@ Partial Class Form1
     Friend WithEvents LastNameTb As TextBox
     Friend WithEvents adressTb As TextBox
     Friend WithEvents GenderCB As ComboBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class
