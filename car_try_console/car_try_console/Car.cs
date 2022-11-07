@@ -23,7 +23,7 @@ namespace car_try_console
         public double lenghtRoad;
         public double _cost;
         #endregion
-        //properties
+        #region properties
         public string Name { get { return _name; } }
         public string Modelname { get { return _modelname; } }
 
@@ -35,7 +35,6 @@ namespace car_try_console
         public double FuelPrice { get; set; }
 
 
-
         public double Cost
         {
             get { return _averageFuelConsumption * fuelPrice; }
@@ -43,10 +42,11 @@ namespace car_try_console
 
 
         }
+        #endregion
 
 
 
-
+        #region constructors
         public Car(string name,
                           string modelname,
                           int numberOfDoors,
@@ -62,10 +62,12 @@ namespace car_try_console
             _averageFuelConsumption = averageFuelConsumption;
 
 
-             
+
 
         }
-        
+        #endregion
+
+        #region methods
         private double CalculateFuelConsumption(double lenghtRoad)
         {
             return AverageFuelConsumption * lenghtRoad / 100;
@@ -84,10 +86,10 @@ namespace car_try_console
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Number of doors: {Modelname}");
             Console.WriteLine($"Engine capacity: {EngineCapacity}");
-            Console.WriteLine($"Average fuel consumption peer 100 km : {AverageFuelConsumption}");
+            Console.WriteLine($"Average fuel consumption peer 100 km for this car is  : {AverageFuelConsumption}");
             Console.WriteLine("******************************************************************");
 
-        // dopisz
+            // dopisz
 
 
 
@@ -96,11 +98,12 @@ namespace car_try_console
         public static void WriteNumberOfCars()
         {
             Console.WriteLine(_numberOfCars);
-        
+
         }
 
 
     }
+         #endregion
 }
 
 

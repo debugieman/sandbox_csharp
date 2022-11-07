@@ -24,7 +24,8 @@ namespace car_try_console
 
         public string Adress { get { return _adress; } }
         public int Capacity
-        { get { return _capacity; } 
+        {
+            get { return _capacity; }
             set
             {
                 _capacity = value;
@@ -32,7 +33,7 @@ namespace car_try_console
 
             }
         }
-        public int Number_of_cars {  get { return _number_of_cars; } set { _number_of_cars = value; } }
+        public int Number_of_cars { get { return _number_of_cars; } set { _number_of_cars = value; } }
         // jak zrobić properkę do tablicy? 
         public List<Car> Cars_in { get { return _cars_in; } set { _cars_in = value; } }
 
@@ -55,8 +56,8 @@ namespace car_try_console
             Console.WriteLine($"New garage created at {adress}, with {capacity} slots availeable");
             _cars_in = new List<Car>(capacity);
             _adress = adress;
-        
-        
+
+
         }
 
         public void ParkCar(Car car)
@@ -81,23 +82,34 @@ namespace car_try_console
 
             }
             else
-            {   to_return = _cars_in.Last();
-                _cars_in.RemoveAt(Cars_in.Count-1);
+            {
+                to_return = _cars_in.Last();
+                _cars_in.RemoveAt(Cars_in.Count - 1);
                 Console.WriteLine("Car has been unparked :P");
-                
-            
+
+
             }
             return to_return;
 
-            
+
         }
-        public void WriteInfo2()
+        public void WriteInfoGarage()
 
         {
             foreach (Car _ in _cars_in)
             {
-                wypis info
-                }
+                
+                    // wszystkiego pola typu prostego klasy samochod
+
+
+                //uzyj met wyszpisz info z CAR
+
+
+
+
+            }
+
+
 
 
 

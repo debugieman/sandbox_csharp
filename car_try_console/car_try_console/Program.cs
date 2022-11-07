@@ -1,5 +1,6 @@
 ﻿
 using car_try_console;
+using static car_try_console.Garage;
 
 
 
