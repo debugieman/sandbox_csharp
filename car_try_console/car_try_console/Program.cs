@@ -13,9 +13,11 @@ auto1.WriteInfo();
 Console.WriteLine($"|Total fulel cost will be : {auto1.CalculateCost(100, 9)}");
 auto2.WriteInfo();
 auto3.WriteInfo();
-
+var g1 = new Garage("Mickiewicza", 15);
 
 Console.WriteLine(Car._numberOfCars);
+g1.WriteInfoGarage();
+
 
 
 Console.ReadKey();

@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using car_try_console;
+using static car_try_console.Car;
 
 namespace car_try_console
 {
-    internal class Garage
+    internal class Garage 
     {
         //adres : adress
         //pojemnosc: capacity
@@ -85,7 +86,7 @@ namespace car_try_console
             {
                 to_return = _cars_in.Last();
                 _cars_in.RemoveAt(Cars_in.Count - 1);
-                Console.WriteLine("Car has been unparked :P");
+                Console.WriteLine("Car  has been unparked :P");
 
 
             }
@@ -96,19 +97,25 @@ namespace car_try_console
         public void WriteInfoGarage()
 
         {
-            foreach (Car _ in _cars_in)
+            Console.WriteLine("Automobile named :is currently parked in garage  in garage  ");
+            foreach (Car  item in _cars_in)
             {
-                
-                    // wszystkiego pola typu prostego klasy samochod
 
+                item.WriteInfo();
+                
+                
 
                 //uzyj met wyszpisz info z CAR
+                
+
+
+
 
 
 
 
             }
-
+            
 
 
 

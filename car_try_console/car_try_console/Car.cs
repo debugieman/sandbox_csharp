@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static car_try_console.Garage;
 
 
 namespace car_try_console
@@ -94,7 +95,7 @@ namespace car_try_console
 
 
         }
-
+        
         public static void WriteNumberOfCars()
         {
             Console.WriteLine(_numberOfCars);
@@ -103,7 +104,7 @@ namespace car_try_console
 
 
     }
-         #endregion
+    #endregion
 }
 
 
