@@ -34,10 +34,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.NameTB = new System.Windows.Forms.TextBox();
             this.AdressTB = new System.Windows.Forms.TextBox();
-            this.GenderDD = new System.Windows.Forms.TextBox();
             this.SurnameTB = new System.Windows.Forms.TextBox();
             this.AddFriend = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.genderCB = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -93,18 +93,6 @@
             this.AdressTB.Size = new System.Drawing.Size(191, 148);
             this.AdressTB.TabIndex = 6;
             // 
-            // GenderDD
-            // 
-            this.GenderDD.AccessibleRole = System.Windows.Forms.AccessibleRole.DropList;
-            this.GenderDD.AllowDrop = true;
-            this.GenderDD.Location = new System.Drawing.Point(109, 83);
-            this.GenderDD.Multiline = true;
-            this.GenderDD.Name = "GenderDD";
-            this.GenderDD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.GenderDD.Size = new System.Drawing.Size(191, 23);
-            this.GenderDD.TabIndex = 7;
-            this.GenderDD.Text = "<empty>\r\n--Male--\r\n--Female--";
-            // 
             // SurnameTB
             // 
             this.SurnameTB.Location = new System.Drawing.Point(109, 44);
@@ -133,15 +121,28 @@
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "";
             // 
+            // genderCB
+            // 
+            this.genderCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genderCB.FormattingEnabled = true;
+            this.genderCB.Items.AddRange(new object[] {
+            "None",
+            "--Male--",
+            "--Female--"});
+            this.genderCB.Location = new System.Drawing.Point(109, 83);
+            this.genderCB.Name = "genderCB";
+            this.genderCB.Size = new System.Drawing.Size(191, 23);
+            this.genderCB.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 378);
+            this.Controls.Add(this.genderCB);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.AddFriend);
             this.Controls.Add(this.SurnameTB);
-            this.Controls.Add(this.GenderDD);
             this.Controls.Add(this.AdressTB);
             this.Controls.Add(this.NameTB);
             this.Controls.Add(this.label4);
@@ -163,9 +164,9 @@
         private Label label4;
         private TextBox NameTB;
         private TextBox AdressTB;
-        private TextBox GenderDD;
         private TextBox SurnameTB;
         private Button AddFriend;
         private RichTextBox richTextBox1;
+        private ComboBox genderCB;
     }
 }

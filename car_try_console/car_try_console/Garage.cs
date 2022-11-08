@@ -54,7 +54,7 @@ namespace car_try_console
         public Garage(string adress, int capacity)
 
         {
-            Console.WriteLine($"New garage created at {adress}, with {capacity} slots availeable");
+            Console.WriteLine($"New garage created at {adress}, with capacity of: {capacity} slots availeable");
             _cars_in = new List<Car>(capacity);
             _adress = adress;
 
@@ -97,7 +97,7 @@ namespace car_try_console
         public void WriteInfoGarage()
 
         {
-            Console.WriteLine("Automobile named :is currently parked in garage  in garage  ");
+            Console.WriteLine("A car has been  currently parked in garage");
             foreach (Car  item in _cars_in)
             {
 
