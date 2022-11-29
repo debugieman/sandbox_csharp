@@ -15,6 +15,8 @@ namespace PhoneBook_list
         {
             Contacts.Add(contact);
 
+
+
         }
 
         public void DisplayContact(string number)
