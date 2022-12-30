@@ -10,7 +10,9 @@ namespace Kata
     {
         // this is test  -> test is this
         // tablica ??
-
+        // index --> ostatnia litera, tworzy separator, konczy jako slowo, wrzuca do listy
+        // leci next 
+        // jak skonczy odwraca liste 
         public static string ReverseWords(string str)
         {
             return "";
@@ -29,9 +31,9 @@ namespace Kata
                     current_index = i + 1;
 
                 }
-                else if (i == input.Lenght - 1)
+                else if (i == input.Length - 1)
                 {
-                    var word = input.Substring(current_index, input.Lenght - current_index);
+                    var word = input.Substring(current_index, input.Length - current_index);
                     result.Add(word);
 
                 }

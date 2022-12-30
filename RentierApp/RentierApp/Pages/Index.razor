@@ -1,0 +1,20 @@
+﻿@page "/"
+
+@using Models
+
+
+<h2>@name</h2>
+
+<br    />
+<h2>@example.Id</h2>
+<h2>@example.Name</h2>
+<input />
+@code{
+    string name = "bob";
+    BaseModel example = new BaseModel()
+        {
+            Id = 1,
+            Name = "Sally"
+        };
+
+}

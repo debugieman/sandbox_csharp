@@ -2,7 +2,13 @@ namespace Kata
 {
     public class Tests
     {
-        [SetUp]
+        [Test]
+        public void splitTest()
+        {
+            var testSpring = "this is a test";
+            var result = Kata.Splitter();
+        
+        }
         public void BasicTest()
 
         { 
