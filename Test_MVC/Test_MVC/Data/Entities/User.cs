@@ -1,18 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace Test_MVC.Data.Entities
 {
-    public class User : DbContext
-
+    public class User
     {
-        public DbSet<User> Users { get; set; }
+        [Key]
         public int ID { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
 
 
     }
-    public classB
+    
 
 }
 
