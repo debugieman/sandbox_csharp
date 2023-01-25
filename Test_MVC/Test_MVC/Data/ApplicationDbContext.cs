@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Test_MVC.Data.Entities;
+using MvcMovie.Models;
 
 namespace Test_MVC.Data
 {
@@ -15,5 +16,6 @@ namespace Test_MVC.Data
             //++ DB sety np . users -
             //konsola: entity -
         }
+        public DbSet<MvcMovie.Models.Movie> Movie { get; set; }
     }
 }
