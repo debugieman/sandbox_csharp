@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Identity;
+
 using Microsoft.EntityFrameworkCore;
 using Test_MVC.Data;
+using MvcMovie.Models;
 
-namespace Test_MVC
+namespace MvcMovie
 {
     public class Program
     {
@@ -21,6 +23,12 @@ namespace Test_MVC
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                SeedData.Initialize(services);
+            }
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
