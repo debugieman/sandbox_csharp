@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MvcMovie.Data;
 
+using MvcMovie.Models;
+
 
 namespace MvcMovie
 {
@@ -13,12 +15,18 @@ namespace MvcMovie
             builder.Services.AddDbContext<MvcMovieContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("MvcMovieContext") ?? throw new InvalidOperationException("Connection string 'MvcMovieContext' not found.")));
 
-           // builder.Services.AddDbContext<DBContext>(options =>
-   // options.UseSqlServer(builder.Configuration.GetConnectionString("MvcMovieContext")));
+            
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                SeedData.Initialize(services);
+            }
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
