@@ -17,5 +17,7 @@ public partial class RealEstateExpence
 
     public DateTime? DateTo { get; set; }
 
+    public virtual ExpenceType ExpenceType { get; set; } = null!;
+
     public virtual RealEstate RealEstate { get; set; } = null!;
 }
