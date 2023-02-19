@@ -37,8 +37,8 @@ namespace RentierSuperApp.Data
         public string City { get; set; }
 
         [ForeignKey(nameof(User))]
-        public string? UserId { get; set; }
-        public virtual Member User { get; set; }
+        public string UserId { get; set; }
+        public virtual User { get; set; }
     }
 
     public class RealEstateExpence

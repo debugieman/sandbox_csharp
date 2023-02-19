@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -14,18 +16,29 @@ namespace RentierSuperApp.Controllers
     public class RealEstatesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public RealEstatesController(ApplicationDbContext context)
+
+
+        public RealEstatesController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
+
 
         // GET: RealEstates
         
         public async Task<IActionResult> Index()
         {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
             var applicationDbContext = _context.RealEstates.Include(r => r.User);
-            return View(await applicationDbContext.ToListAsync());
+            var query  = applicationDbContext.Where(r => r.UserId == user.Id);
+            return View(await query.ToListAsync());
         }
 
         // GET: RealEstates/Details/5
@@ -69,7 +82,7 @@ namespace RentierSuperApp.Controllers
             
 
 
-                _context.Add(realEstate);
+                _context.Add(newRealEstate);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             
