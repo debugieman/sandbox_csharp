@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using RentierSuperApp.Data;
+using RentierSuperApp.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -38,7 +40,7 @@ namespace RentierSuperApp.Data
 
         [ForeignKey(nameof(User))]
         public string UserId { get; set; }
-        public virtual User { get; set; }
+        public virtual User User { get; set; }
     }
 
     public class RealEstateExpence
